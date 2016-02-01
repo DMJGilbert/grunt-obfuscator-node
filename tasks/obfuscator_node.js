@@ -23,7 +23,7 @@ module.exports = function(grunt) {
     });
 
     var fn = this.async();
-	var files = this.files;
+    var files = this.files;
     var fileCount = 0;
 
     this.files.forEach(function(f) {
@@ -45,12 +45,12 @@ module.exports = function(grunt) {
             grunt.log.error(err);
             return fn(false);
           }
-		  fileCount++;
+          fileCount++;
           grunt.file.write(f.dest,data);
           grunt.log.writeln('File "' + f.dest + '" created.');
           if(fileCount >= files.length){
-		    fn();
-		  }
+            fn();
+          }
       });
     });
   });
