@@ -1,11 +1,11 @@
-var express = require('express');
-var app = express();
+const express = require('express');
+const app = express();
 
 app.get('/', function (req, res) {
     res.send('Hello World!');
 });
 
-var server = app.listen(3000, function () {
+let server = app.listen(3000,  () => {
 
     var host = server.address().address;
     var port = server.address().port;
